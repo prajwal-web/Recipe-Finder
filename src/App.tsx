@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import useExercises from "./hooks/useExcercises";
 import "./styles/App.css";
-import Rating from '@mui/material/Rating';
+import Rating from "@mui/material/Rating";
 
 function App() {
   // const { recipes, setSearch } = useRecipeList();
@@ -25,10 +25,10 @@ function App() {
   }));
 
   const mratingObj = {
-    'beginner': 2,
-    'intermediate': 3.5,
-    'advanced': 4.5,
-  }
+    beginner: 2,
+    intermediate: 3.5,
+    advanced: 4.5,
+  };
 
   return (
     <>
@@ -50,7 +50,11 @@ function App() {
                   <Typography gutterBottom variant="body2">
                     {exercise?.muscle}
                   </Typography>
-                  <Rating value={mratingObj[exercise?.difficulty]}  precision={0.5} readOnly></Rating>
+                  <Rating
+                    value={mratingObj[exercise?.difficulty]}
+                    precision={0.5}
+                    readOnly
+                  ></Rating>
                 </CardContent>
               </Card>
             </FormGrid>
